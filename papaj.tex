@@ -1,0 +1,111 @@
+\documentclass{article}
+\usepackage{polski}
+\usepackage[utf8]{inputenc}
+\usepackage{indentfirst} 
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+
+\begin{document}
+
+\input{./titlepage.tex}
+\tableofcontents
+\newpage
+
+\section{Opis}
+
+Papaj jest robotem typu line-follower stworzonym na potrzeby corocznego konkursu RoboDay na Politechnice Poznańskiej, wykonanym przez zdolnych i dumnych studentów z grupy I4.2. 
+
+Nasze urządzenie jest klasycznym przykładem line-followera. Posiada on napęd na tylne koła (każde posiada własny silnik), jest wyposażony w ślizgacze w przedniej części robota oraz 7 czujników linii. Całość jest zasilana popularnymi "paluszkami", co przekłada się na niską cenę.
+
+Papaj został sensacyjnym zwycięzcą RoboDay 2015 w kategorii line-followerów zostawiając w tyle bardziej rozbudowane i droższe konstrukcje.
+
+\section{Nazwa}
+				
+Robocza nazwa Papaja brzmiała "Pommes frites" od napisu, który znajdował się na pudełku, który robił za miejsce jego przechowywania - jednak z powodu niedawnych obchodów 95-rocznicy urodzin Wielkiego Polaka Jana Pawła II, postanowiliśmy nazwać naszego robota na jego cześć. 
+
+Tym samym dołożyliśmy małą cegiełkę w rozpowszechnianie jedynej słusznej prawdy o naszym papieżu. 
+						
+\section{Budżet}
+
+Jednym z kryteriów, które przyjęliśmy w trakcie projektowania robota była jego cena, która nie powinna przekroczyć 30 zł/os. W związku z tym staraliśmy się maksymalnie ciąć koszty, szukając u siebie i wśród znajomych części, które mogłyby przydać się do zbudowania robota - szczególnie koncentrując się na silniku i zasilaniu. Niestety, zarówno zasilanie, jak i silnik okazały się zbyt mało wydajne i zostaliśmy zmuszeni do zakupu nowych.
+
+Trzeba również zaznaczyć, że nie wszystkie elementy zostały ostatecznie użyte do zbudowania robota (wiele z nich zostało kupione "na zapas") - jednak nie mają one większego wpływu na łączny koszt naszego line-followera.
+
+\begin{table}[c]
+\caption{Spis części zakupionych na potrzeby Papaja (ceny w zł)}
+\label{table:koszta}
+\centering
+\begin{tabular}{l|r|r|r}
+Element                       & Koszt jedn. & Ilość & Koszt łączny \\
+\hline
+Transaptor odbiciowy CNY70    & 2,00        & 7     & 14,00        \\
+Papier kredowy                & 0,60        & 1     & 0,60         \\
+Środek drobnokrystaliczny     & 8,00        & 1     & 8,00         \\
+Laminat jednostronny 190x3    & 15,00       & 1     & 15,00        \\
+Kondensator ceram. dyskowy    & 0,20        & 12    & 2,40         \\
+LED 3mm                       & 0,20        & 3     & 0,60         \\
+Sterownik silnika L-293D      & 11,00       & 1     & 11,00        \\
+Dławik AL0307                 & 0,20        & 1     & 0,20         \\
+Rezystory metaloxide          & 0,20        & 18    & 3,60         \\
+20K 0,2W                      & 4,90        & 1     & 4,90         \\
+Gniazdo jednorzędowe BLS-09   & 0,45        & 2     & 0,90         \\
+Piny do gniazd BLS BL-T       & 0,10        & 24    & 2,40         \\
+Gniazda jednorzędowe BLS-02   & 0,10        & 2     & 0,20         \\
+Podstawka DIL-28              & 0,50        & 1     & 0,50         \\
+Zestaw przewodów              & 7,00        & 1     & 7,00         \\
+Płytka stykowa SD12NB         & 14,00       & 1     & 14,00        \\
+Listwa 2-rzędowa PLD40        & 1,50        & 1     & 1,50         \\
+Bateria 9V                    & 2,60        & 1     & 2,60         \\
+BC-639 NPN 100V               & 0,40        & 2     & 0,80         \\
+Zacisk do baterii 9V          & 1,60        & 1     & 1,60         \\
+Stabilizator napięcia L-7805C & 1,90        & 1     & 1,90         \\
+CMOS-4051                     & 1,50        & 1     & 1,50         \\
+Rezystory węglowe             & 0,30        & 2     & 0,60         \\
+Kondensator 10uF 16V          & 0,50        & 5     & 2,50         \\
+LED 5mm                       & 0,40        & 5     & 2,00         \\
+Łącznik refl. CNY70           & 5,50        & 1     & 5,50         \\
+Kondensator ele. 47uF 16V     & 0,20        & 2     & 0,40         \\
+Rezonator kwarcowy 0-16MHz    & 1,80        & 1     & 1,80         \\
+Kondesator ele. 22uF 16V      & 0,20        & 2     & 0,40         \\
+Dławik radialny 10uH          & 1,30        & 1     & 1,30         \\
+ATmega8A-PU DIP28             & 6,99        & 3     & 20,97        
+\end{tabular}
+\end{table}
+
+
+Dokładny spis elementów zakupionych na potrzeby Papaja znajduje się w tabeli \ref{table:koszta} na stronie \pageref{table:koszta}.
+
+\section{Schemat ideowy}
+
+\subsection{Jednostka centralna}
+
+\subsection{Zasilanie}
+
+\subsection{Sterowanie silnikami}
+
+\subsection{Czujniki odbiciowe}
+
+\section{Mechanika}
+
+\subsection{Płytka}
+
+\subsection{Układ jezdny}
+
+\subsection{Model 3D}
+
+\section{Kod źródłowy}
+
+[piezol here]
+
+\section{Wnioski}
+
+\section{Podziękowania}
+
+Na wstępie chcielibyśmy podziękować naszemu prowadzącemu, dr. inż. Rafałowi Klausowi,  za nieocenione wsparcie i wkład w budowę naszego robota. Jesteśmy dumni ze współpracy z dr. Klausem i mamy cichą nadzieję, że również on jest z naszej pracy dumny.
+
+Dziękujemy także Maciejowi Uniejewskiemu i Mateuszowi Sarbinowskiemu, którzy  wytykając nam brak ambicji i odrzucając naszą propozycję współpracy, zachęcili nas do tytanicznej pracy zakończonej pełnym sukcesem. Z litości nie będziemy wspominać, jakie pozycje w konkursie zajęły grupy, do których dwie powyższe jednostki należały. Mamy również nadzieję, że taka sytuacja w przyszłości się nie powtórzy - choć obiecujemy, że tego Wam nigdy nie zapomnimy.
+
+Nie możemy zapomnieć również o Janie Pawle II, który dawał nam inspirację i chęci do tworzenia robota, pomimo wszelkich przeciwności losu.
+
+Na koniec pragniemy serdecznie podziękować grupie tworzącej robota "Mały, ale wariat" z Aleksandrą Kobus na czele. Doprawdy rzadko zdarza się sytuacja, aby grupa, która sama tworzyła trasę finalną i miała przywilej testowania swojego robota na swojej trasie parę dni przed zawodami, zawody te przegrała. Szczerze gratulujemy.
+
+\end{document}
