@@ -1,0 +1,29 @@
+Kod programu powstawał w ciężkich bólach i jest efektem wielu nieprzespanych nocy, burzy mózgów, wymiany doświadczeń i ton wypitych płynów niezbędnych do funkcjonowania studenta. Skoro jednak nasz robot wygrał, to ma on jakieś pozory sensu.
+
+Algorytm opiera się na zasadzie działania regulatora PID. W każdej iteracji (około 3000 na sekundę) program sprawdza, który najbardziej skrajny czujnik wykrywa linię. Każdemu czujnikowi przypisane są odpowiednie wagi - po prawej stronie robota są dodatnie, a po lewej ujemne.
+Następnie wyliczane są wartości członów: 
+\begin{itemize}
+\item proporcjonalnego (bezpośrednio wskazującego na kierunek, w którym znajduje się linia)
+\item różniczkującego (odpowiedzialnego za nagłą zmianę kierunku jazdy)
+\item całkującego (odpowiedzialnego za stopniowe zmniejszanie promienia skrętu w wypadku pokonywania długiego zakrętu)
+\end{itemize}
+
+Ich suma podstawiana jest do zmiennej \emph{steeringValue},  której wartość następnie zmniejsza/zwiększa się tak, aby mieściła się w przedziale (-1000; 1000).
+Jeśli jest ujemna (czyli robot powinien skręcać w lewo), ustawiana jest maksymalna prędkość prawego koła, a prędkość lewego jest pomniejszana o wartość bezwzględną \emph{steeringValue}. 
+Jeśli jest dodatnia (czyli robot powinien skręcać w prawo), ustawiana jest maksymalna prędkość lewego koła, a prędkość prawego jest pomniejszana o wartość bezwzględną \emph{steeringValue}.
+
+Przy bardzo ostrych skrętach robot wyjeżdża poza linię (stan zerowy wszystkich czujników). W takim wypadku, aby przyspieszyć jego powrót (który normalnie zostałby również wykonany, dzięki członowi całkującemu), tymczasowo ignorowana jest wartość \emph{steeringValue} i uruchomiona zostaje procedura przywracania robota na trasę, poprzez wykonanie gwałtownego skrętu w stronę ostatniego czujnika, pod którym wcześniej wykryta była linia, tj. w wypadku ostrego skrętu w prawo prędkość lewego koła jest ustawiana na maksymalną, natomiast prawe koło jest przez krótki okres wycofywane, co jeszcze bardziej zmniejsza promień skrętu. Po ponownym wykryciu linii program powraca do normalnej pracy.
+
+Prędkość kół ustawiana jest za pomocą metod \emph{setLeftMotorPwm} oraz \emph{setRightMotorPwm}, przyjmujących wartości z zakresu od 0 do 1000 i przekształcających je liniowo do przedziału opisywanego przez stałe \emph{lmin}, \emph{lmax} lub \emph{rmin} oraz \emph{rmax}, które definiują minimalne oraz maksymalne wypełnienie sygnału PWM na wyjściu do odpowiedniego silnika. Przykładowo przy ustawieniu:
+
+\begin{lstlisting}
+const int lmin = 0;
+const int rmin = 0;
+const int rmax = 380;
+const int lmax = 400;
+\end{lstlisting}
+wywołanie funkcji:
+\begin{lstlisting}
+setLeftMotorPwm(900);
+\end{lstlisting}
+spowodowałoby ustawienie wysokiej prędkości dla lewego silnika (wypełnienie PWM = 360).
