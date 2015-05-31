@@ -1,5 +1,10 @@
 Napęd robota składa się z dwóch silniczków. Ich działanie opiera się na metodzie różnicowej, stosowanej chociażby w czołgach. Każde koło jest oddzielnie napędzane i skręt wynika z tego, że jedno koło kręci się szybciej od drugiego. Ruch kółek czerpie się z działania silniczków elektrycznych, których szybkość jest zależna od ilości napięcia jakie zostanie dostarczone na styki. Konieczną procedurą było zatem sprawienie, że ruch silniczka miałby wpływ na ruch kółka. Należało skonstruować jakiś mechanizm przeniesienia jednego ruchu na drugi. 
 
-„Należało”- słowo to padło nie przypadkowo, ponieważ zaniechaliśmy konstrukcji własnej roboty. Byłby to mechanizm niedoskonały, który znacznie spowolniłby robota z powodu niedoskonałości technicznych układu przełożenia. Z tego też powodu postanowiliśmy zainwestować więcej pieniędzy w silniczki, które miało gotową zębatkę dopasowaną do dołączonego kółka. Układ ten bardzo dobrze się sprawdził, nie „gubił” kroków i dzięki temu robot nasz mógł poruszać się tempem bardzo szybkim.
+„Należało” - słowo to padło nie przypadkowo, ponieważ zaniechaliśmy konstrukcji własnej roboty. Byłby to mechanizm niedoskonały, który znacznie spowolniłby robota z powodu niedoskonałości technicznych układu przełożenia. Z tego też powodu postanowiliśmy zainwestować więcej pieniędzy w silniczki, które miało gotową zębatkę dopasowaną do dołączonego kółka. Układ ten bardzo dobrze się sprawdził, nie „gubił” kroków i dzięki temu robot nasz mógł poruszać się tempem bardzo szybkim.
 
 Najprostsza jednak wersja napędu opiera się na przekładni pasowej zbudowanej z popularnej gumki recepturki. Daje ona rezultaty, jest do tego opcją budżetową i ekonomiczną, jednakże ma mały współczynnik tarcia statycznego i nie może osiągnąć zachwycającej prędkości. Rozwiązanie dylematu prędkość vs. koszty zostawiamy Czytelnikowi, którego bardzo serdecznie pozdrawiamy. Osoby posiadające zabawki mogą się również postarać o sprawdzenie, czy z ich komponentów nie dałoby się stworzyć napędu. Przydatne byłby wszelkiego rodzaju zębatki. Ważna jest kreatywność, otwarty umysł i wiara we własne możliwości. 
+
+//IKSDE
+
+
+W celu okiełznania Papaja został wykorzystany układ L293, który miał na celu sterowanie pracą silników. Regulacja prędkości obrotowej kół odbywa się poprzez PWM (regulację współczynników wypełnienia).

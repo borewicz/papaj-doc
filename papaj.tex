@@ -4,6 +4,7 @@
 \usepackage{indentfirst} 
 \usepackage{graphicx} 
 \usepackage{pdfpages}
+\usepackage{listings}
 \newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
 
 \begin{document}
@@ -82,13 +83,26 @@ Dokładny spis elementów zakupionych na potrzeby Papaja znajduje się w tabeli 
 
 \subsection{Zasilanie}
 
-\subsection{Sterowanie silnikami}
+Zasilanie było zdecydowanie największym wyzwaniem podczas budowy Papaja. Pod uwagę były brane najróżniejsze opcje, łącznie z wykorzystaniem używanych akumulatorków z telefonów marki Nokia (sic!). Zastosowane rozwiązanie, które walnie przyczyniło się do naszego zwycięstwa, przyszło do nas z najmniej spodziewanej strony - sklepu niejakiego  Gembary, który zasugerował nam rozwiązanie "tanio i tanio".
 
+Papaj zasilany jest ośmioma popularnymi paluszkami (baterie AA) połączonymi szeregowo, co zdecydowanie zmniejszyło koszty, zapewniało większą elastyczność i dawało nam całe 12V do wykorzystania. Rozwiązanie to ma jednak dużą wadę - znacząco zwiększa masę robota, co w połączeniu z umiejscowieniem baterii w tylnej części robota powodowało, że Papaj podnosił się i rwał ku radości całego zespołu. 
 
+W celu stabilizowania napięcia dla elektroniki na poziomie 5V zastosowany został stabilizator L-7805C i dał radę.  Silniki natomiast delektowały się pełnym napięciem z baterii wynoszącym 12V.
 
 \subsection{Czujniki odbiciowe}
 
+Papaj w celu wywęszenia linii korzysta z 7 transoptorów CNY70 - ustaliliśmy tę liczbę doświadczalnie w wyniku prób i błędów. Poza tym liczba 7 jest liczbą szczęśliwą i w naszym przypadku sprawdziło się to w stu procentach.
 
+Osobną kwestią był sposób ich połączenia z mikrokontrolerem. Na początku myśleliśmy nad rozwiązaniem programowym, tj. podłączenie sygnału z czujników bezpośrednio do wejść ADC. To rozwiązanie jednak zostało szybko porzucone z paru prozaicznych powodów:
+\begin{itemize}
+\item ATmega8A-PU ma tylko 6 wejść ADC,
+\item programowanie ADC na ATmegach jest niezbyt ciekawe,
+\item nie chciało się nam.
+\end{itemize}
+
+Stąd też podjeliśmy decyzję o wykorzystaniu rozwiązania sprzętowego, czyli podłączenia transoptorów do zewnętrznych komparatorów (odpowiedzialnych za zamianę sygnału analogowego na cyfrowy), które z kolei są podłączone do wejść cyfrowych ATmegi. 
+
+Ponieważ warunki oświetleniowe w korytarzu BT nie należą do specjalnie dobrych, niezbędne było użycie potencjometru, dzięki któremu poprzez zmianę napięcia odniesienia ustalaliśmy próg decyzji (tj. przejścia między sygnałem 0 i 1). Miało to szczególne znaczenie podczas zawodów, gdyż na trasie białe nie było białe, a czarne też nie było czarne. 
 
 \section{Mechanika}
 
@@ -102,15 +116,7 @@ Dokładny spis elementów zakupionych na potrzeby Papaja znajduje się w tabeli 
 
 \section{Kod źródłowy}
 
-Poniższy kod powstawał w ciężkich bólach i jest efektem wielu nieprzespanych nocy, burzy mózgów, wymiany doświadczeń i ton wypitych płynów niezbędnych do funkcjonowania studenta. 
-
-Ten akapit sobie zostawiam.
-
-I ten też.
-
-Dopiero tutaj możesz piezol zaczynać.
-
-\section{Wnioski}
+\input{./alg.tex}
 
 \section{Podziękowania}
 
