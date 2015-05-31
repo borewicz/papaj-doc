@@ -1,0 +1,12 @@
+Papaj w celu wywęszenia linii korzysta z 7 transoptorów CNY70 - ustaliliśmy tę liczbę doświadczalnie w wyniku prób i błędów. Poza tym liczba 7 jest liczbą szczęśliwą i w naszym przypadku sprawdziło się to w stu procentach.
+
+Osobną kwestią był sposób ich połączenia z mikrokontrolerem. Na początku myśleliśmy nad rozwiązaniem programowym, tj. podłączenie sygnału z czujników bezpośrednio do wejść ADC. To rozwiązanie jednak zostało szybko porzucone z paru prozaicznych powodów:
+\begin{itemize}
+\item ATmega8A-PU ma tylko 6 wejść ADC,
+\item programowanie ADC na ATmegach jest niezbyt ciekawe,
+\item nie chciało się nam.
+\end{itemize}
+
+Stąd też podjeliśmy decyzję o wykorzystaniu rozwiązania sprzętowego, czyli podłączenia transoptorów do zewnętrznych komparatorów (odpowiedzialnych za zamianę sygnału analogowego na cyfrowy), które z kolei są podłączone do wejść cyfrowych ATmegi. 
+
+Ponieważ warunki oświetleniowe w korytarzu BT nie należą do specjalnie dobrych, niezbędne było użycie potencjometru, dzięki któremu poprzez zmianę napięcia odniesienia ustalaliśmy według potrzeby próg decyzji (tj. przejścia między sygnałem 0 i 1). Miało to szczególne znaczenie podczas zawodów, gdyż na trasie białe nie było białe, a czarne też nie było czarne. 
