@@ -31,50 +31,72 @@ Tym samym dołożyliśmy małą cegiełkę w rozpowszechnianie jedynej słusznej
 
 Jednym z kryteriów, które przyjęliśmy w trakcie projektowania robota była jego cena, która nie powinna przekroczyć 30 zł/os. W związku z tym staraliśmy się maksymalnie ciąć koszty, szukając u siebie i wśród znajomych części, które mogłyby przydać się do zbudowania robota - szczególnie koncentrując się na silniku i zasilaniu. Niestety, zarówno zasilanie, jak i silnik okazały się zbyt mało wydajne i zostaliśmy zmuszeni do zakupu nowych.
 
-Trzeba również zaznaczyć, że nie wszystkie elementy zostały ostatecznie użyte do zbudowania robota (wiele z nich zostało kupione "na zapas") - jednak nie mają one większego wpływu na łączny koszt naszego line-followera.
+Zdecydowaliśmy się także na wspieranie lokalnego przemysłu elektronicznego, kupując części w sklepach elektronicznych w całym Poznaniu, zamiast korzystając z ofert dostępnych w internecie. Dzięki temu udało nam się oszczędzić na ewentualnych kosztach wysyłki.
 
-\begin{table}[c]
-\caption{Spis części zakupionych na potrzeby Papaja (ceny w zł)}
-\label{table:koszta}
+Nie byliśmy w stanie wycenić niektórych elementów, które miały niebagatelny wpływ na Papaja. Mamy tu na myśli szczególnie korki do wina, których wartość niełatwo ustalić bez ich powiązania z butelkami od wina (niekoniecznie pustymi). 
+
+Łączny koszt robota wyniósł 168,6 zł, co w przeliczeniu na osobę daje niewiele ponad 24 polskich nowych złotych. Jest to naszym zdaniem bardzo udany wynik.
+
+\begin{table}[!htbp]
 \centering
+\caption{Elementy wykorzystane w Papaju (w zł)}
+\label{table:koszta}
 \begin{tabular}{l|r|r|r}
-Element                       & Koszt jedn. & Ilość & Koszt łączny \\
+Nazwa                          & Cena & Ilość & Koszt \\
 \hline
-Transaptor odbiciowy CNY70    & 2,00        & 7     & 14,00        \\
-Papier kredowy                & 0,60        & 1     & 0,60         \\
-Środek drobnokrystaliczny     & 8,00        & 1     & 8,00         \\
-Laminat jednostronny 190x3    & 15,00       & 1     & 15,00        \\
-Kondensator ceram. dyskowy    & 0,20        & 12    & 2,40         \\
-LED 3mm                       & 0,20        & 3     & 0,60         \\
-Sterownik silnika L-293D      & 11,00       & 1     & 11,00        \\
-Dławik AL0307                 & 0,20        & 1     & 0,20         \\
-Rezystory metaloxide          & 0,20        & 18    & 3,60         \\
-20K 0,2W                      & 4,90        & 1     & 4,90         \\
-Gniazdo jednorzędowe BLS-09   & 0,45        & 2     & 0,90         \\
-Piny do gniazd BLS BL-T       & 0,10        & 24    & 2,40         \\
-Gniazda jednorzędowe BLS-02   & 0,10        & 2     & 0,20         \\
-Podstawka DIL-28              & 0,50        & 1     & 0,50         \\
-Zestaw przewodów              & 7,00        & 1     & 7,00         \\
-Płytka stykowa SD12NB         & 14,00       & 1     & 14,00        \\
-Listwa 2-rzędowa PLD40        & 1,50        & 1     & 1,50         \\
-Bateria 9V                    & 2,60        & 1     & 2,60         \\
-BC-639 NPN 100V               & 0,40        & 2     & 0,80         \\
-Zacisk do baterii 9V          & 1,60        & 1     & 1,60         \\
-Stabilizator napięcia L-7805C & 1,90        & 1     & 1,90         \\
-CMOS-4051                     & 1,50        & 1     & 1,50         \\
-Rezystory węglowe             & 0,30        & 2     & 0,60         \\
-Kondensator 10uF 16V          & 0,50        & 5     & 2,50         \\
-LED 5mm                       & 0,40        & 5     & 2,00         \\
-Łącznik refl. CNY70           & 5,50        & 1     & 5,50         \\
-Kondensator ele. 47uF 16V     & 0,20        & 2     & 0,40         \\
-Rezonator kwarcowy 0-16MHz    & 1,80        & 1     & 1,80         \\
-Kondesator ele. 22uF 16V      & 0,20        & 2     & 0,40         \\
-Dławik radialny 10uH          & 1,30        & 1     & 1,30         \\
-ATmega8A-PU DIP28             & 6,99        & 3     & 20,97        
+środek drobnokrystaliczny B327 & 8    & 1     & 8     \\
+laminat jednostronny 190x3     & 15   & 1     & 15    \\
+LEDy 3mm                       & 0,2  & 3     & 0,6   \\
+sterownik silnika L293D        & 11   & 1     & 11    \\
+potencjometr drutowy           & 4,9  & 1     & 4,9   \\
+gniazdo jednorzędowe BLS-09    & 0,45 & 2     & 0,9   \\
+BL-T piny do gniazd BLS        & 0,1  & 24    & 2,4   \\
+gniazdo jednorzędowe BLS-02    & 0,1  & 2     & 0,2   \\
+podstawka DIL-28               & 0,5  & 1     & 0,5   \\
+zestaw przewodów               & 7    & 1     & 7     \\
+płytka prototypowa SD12NB      & 14   & 1     & 14    \\
+listwa dwurzędowa PLD40        & 1,5  & 1     & 1,5   \\
+stabilizator napięcia L-7805C  & 1,9  & 1     & 1,9   \\
+transoptory CNY70              & 3    & 7     & 21    \\
+rezonator kwarcowy             & 1,8  & 1     & 1,8   \\
+dławik 12uH                    & 0,2  & 1     & 0,2   \\
+LEDy 5mm                       & 0,4  & 5     & 2     \\
+silnik + koło                  & 17   & 2     & 34    \\
+listwa jednorzędowa PLS-40     & 1,4  & 2     & 2,8   \\
+papier kredowy                 & 0,6  & 1     & 0,6   \\
+zestaw 8 baterii AA            & 15   & 1     & 15    \\
+komparatory                    & 0,7  & 2     & 1,4   \\
+koszyki                        & 2,5  & 2     & 5     \\
+ATmega8A-PU                    & 6    & 1     & 6     \\
+\hline
+łącznie                          &      &       & 157,7
+\end{tabular}
+\centering
+\caption{Wykorzystane rezystory (w zł)}
+\begin{tabular}{l|r|r|r}
+Nazwa          & Koszt & Ilość & Suma \\
+\hline
+metaloxid 150 Ohm  & 0,2 & 3 & 0,6 \\
+metaloxid 100 kOhm & 0,2 & 7 & 1,4 \\
+węglowy 10 kOhm    & 0,3 & 8 & 2,4 \\
+węglowy 240 Ohm    & 0,3 & 7 & 2,1 \\
+\hline
+łącznie           &     &   & 6,5
+\end{tabular}
+
+\caption{Wykorzystane kondensatory (w zł)}
+\begin{tabular}{l|r|r|r}
+Nazwa          & Koszt & Ilość & Suma \\
+\hline
+ceram. dyskowy 100 nF & 0,2 & 12 & 2,4 \\
+elektrolityczny 10 uF & 0,5 & 2  & 1   \\
+elektrolityczny 47 uF & 0,2 & 2  & 0,4 \\
+elektrolityczny 22 uF & 0,2 & 1  & 0,2 \\
+ceramiczny 22 pF      & 0,2 & 2  & 0,4 \\
+\hline
+łącznie                &     & & 4,4
 \end{tabular}
 \end{table}
-
-Dokładny spis elementów zakupionych na potrzeby Papaja znajduje się w tabeli \ref{table:koszta} na stronie \pageref{table:koszta}.
 
 \section{Schemat ideowy}
 
@@ -82,27 +104,10 @@ Dokładny spis elementów zakupionych na potrzeby Papaja znajduje się w tabeli 
 \input{./cpu.tex}
 
 \subsection{Zasilanie}
-
-Zasilanie było zdecydowanie największym wyzwaniem podczas budowy Papaja. Pod uwagę były brane najróżniejsze opcje, łącznie z wykorzystaniem używanych akumulatorków z telefonów marki Nokia (sic!). Zastosowane rozwiązanie, które walnie przyczyniło się do naszego zwycięstwa, przyszło do nas z najmniej spodziewanej strony - sklepu niejakiego  Gembary, który zasugerował nam rozwiązanie "tanio i tanio".
-
-Papaj zasilany jest ośmioma popularnymi paluszkami (baterie AA) połączonymi szeregowo, co zdecydowanie zmniejszyło koszty, zapewniało większą elastyczność i dawało nam całe 12V do wykorzystania. Rozwiązanie to ma jednak dużą wadę - znacząco zwiększa masę robota, co w połączeniu z umiejscowieniem baterii w tylnej części robota powodowało, że Papaj podnosił się i rwał ku radości całego zespołu. 
-
-W celu stabilizowania napięcia dla elektroniki na poziomie 5V zastosowany został stabilizator L-7805C i dał radę.  Silniki natomiast delektowały się pełnym napięciem z baterii wynoszącym 12V.
+\input{./power.tex}
 
 \subsection{Czujniki odbiciowe}
-
-Papaj w celu wywęszenia linii korzysta z 7 transoptorów CNY70 - ustaliliśmy tę liczbę doświadczalnie w wyniku prób i błędów. Poza tym liczba 7 jest liczbą szczęśliwą i w naszym przypadku sprawdziło się to w stu procentach.
-
-Osobną kwestią był sposób ich połączenia z mikrokontrolerem. Na początku myśleliśmy nad rozwiązaniem programowym, tj. podłączenie sygnału z czujników bezpośrednio do wejść ADC. To rozwiązanie jednak zostało szybko porzucone z paru prozaicznych powodów:
-\begin{itemize}
-\item ATmega8A-PU ma tylko 6 wejść ADC,
-\item programowanie ADC na ATmegach jest niezbyt ciekawe,
-\item nie chciało się nam.
-\end{itemize}
-
-Stąd też podjeliśmy decyzję o wykorzystaniu rozwiązania sprzętowego, czyli podłączenia transoptorów do zewnętrznych komparatorów (odpowiedzialnych za zamianę sygnału analogowego na cyfrowy), które z kolei są podłączone do wejść cyfrowych ATmegi. 
-
-Ponieważ warunki oświetleniowe w korytarzu BT nie należą do specjalnie dobrych, niezbędne było użycie potencjometru, dzięki któremu poprzez zmianę napięcia odniesienia ustalaliśmy próg decyzji (tj. przejścia między sygnałem 0 i 1). Miało to szczególne znaczenie podczas zawodów, gdyż na trasie białe nie było białe, a czarne też nie było czarne. 
+\input{./sensors.tex}
 
 \section{Mechanika}
 
