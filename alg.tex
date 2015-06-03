@@ -3,9 +3,9 @@ Kod programu powstawał w ciężkich bólach i jest efektem wielu nieprzespanych
 Algorytm opiera się na zasadzie działania regulatora PID. W każdej iteracji (około 3000 na sekundę) program sprawdza, który najbardziej skrajny czujnik wykrywa linię. Każdemu czujnikowi przypisane są odpowiednie wagi - po prawej stronie robota są dodatnie, a po lewej ujemne.
 Następnie wyliczane są wartości członów: 
 \begin{itemize}
-\item proporcjonalnego (bezpośrednio wskazującego na kierunek, w którym znajduje się linia)
-\item różniczkującego (odpowiedzialnego za nagłą zmianę kierunku jazdy)
-\item całkującego (odpowiedzialnego za stopniowe zmniejszanie promienia skrętu w wypadku pokonywania długiego zakrętu)
+\item proporcjonalnego (bezpośrednio wskazującego na kierunek, w którym znajduje się linia),
+\item różniczkującego (odpowiedzialnego za nagłą zmianę kierunku jazdy),
+\item całkującego (odpowiedzialnego za stopniowe zmniejszanie promienia skrętu w wypadku pokonywania długiego zakrętu).
 \end{itemize}
 
 Ich suma podstawiana jest do zmiennej \emph{steeringValue},  której wartość następnie zmniejsza/zwiększa się tak, aby mieściła się w przedziale (-1000; 1000).
